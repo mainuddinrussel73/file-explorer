@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="382.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filebrowser.FXMLcontroller">
+   <children>
+      <TreeView fx:id="treeviewFileBrowse" layoutX="2.0" layoutY="78.0" prefHeight="289.0" prefWidth="171.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="747.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="View">
+               <items>
+                  <MenuItem fx:id="go" mnemonicParsing="false" text="TileView" />
+                  <MenuItem fx:id="go1" mnemonicParsing="false" text="TableView" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="search" layoutX="163.0" layoutY="41.0" prefHeight="25.0" prefWidth="491.0" promptText="Current Directory" />
+      <AmbientLight color="CHARTREUSE" lightOn="true" />
+      <AnchorPane fx:id="pan" layoutX="181.0" layoutY="78.0" prefHeight="315.0" prefWidth="566.0">
+         <children>
+            <ScrollPane fx:id="s" layoutX="10.0" layoutY="5.0" prefHeight="283.0" prefWidth="546.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="root" prefHeight="264.0" prefWidth="546.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="36.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="103.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="5.0" prefWidth="30.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="8.0" prefWidth="85.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="0.0" prefWidth="27.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="0.0" prefWidth="94.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="35.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="109.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></AnchorPane>
+      <Label layoutX="65.0" layoutY="45.0" prefHeight="17.0" prefWidth="98.0" text="Current Directory" textFill="#219bd9">
+         <font>
+            <Font name="Bell MT" size="12.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Label>
+      <ListView fx:id="listviewFiles" layoutX="181.0" layoutY="102.0" prefHeight="277.0" prefWidth="546.0" />
+      <Label fx:id="icon" contentDisplay="CENTER" layoutX="190.0" layoutY="78.0" prefHeight="25.0" prefWidth="71.0" text="Icon" textAlignment="CENTER" textFill="#0e3949">
+         <effect>
+            <Bloom />
+         </effect></Label>
+      <Label fx:id="file" layoutX="518.0" layoutY="78.0" prefHeight="25.0" prefWidth="71.0" text="File Name" textFill="#1e91bf" />
+      <Label fx:id="size" layoutX="418.0" layoutY="78.0" prefHeight="25.0" prefWidth="71.0" text="Size" textFill="#1e91bf" />
+      <Label fx:id="last" layoutX="261.0" layoutY="78.0" prefHeight="25.0" prefWidth="127.0" text="Last Modified" textFill="#1e91bf" />
+      <PointLight color="CHARTREUSE" lightOn="true" />
+      <Button layoutX="661.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Go" textFill="#1ba2e0">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
